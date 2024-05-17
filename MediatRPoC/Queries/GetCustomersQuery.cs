@@ -29,7 +29,7 @@ namespace MediatRPoC.Queries
 		public async Task<List<CustomerDto>> Handle(GetCustomersQuery request, CancellationToken cancellationToken)
 		{
 
-			var customers = await _unitOfWork.Repository<Customer>().ListAsync(new CustomerForDtoSpecification(request.Name));
+			var customers = await _unitOfWork.Repository<Customer>().ListAsync(new GetCustomersFilteredByNameSpecification(request.Name));
 			return customers.ToList();
 		}
 	}
