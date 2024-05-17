@@ -1,0 +1,6 @@
+@MediatRPoC_HostAddress = http://localhost:5250
+
+GET {{MediatRPoC_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
